@@ -31,7 +31,7 @@ fig_scatter_avg_amount_age.show()
 
 # Count of Transactions by  Day of the week
 fig_day_of_week = px.bar(data, x='Day_of_Week',
-                         title='Coutn of Transactions by Day of the Week')
+                         title='Count of Transactions by Day of the Week')
 fig_day_of_week.show()
 
 
@@ -87,7 +87,7 @@ for feature in relevant_features:
 
 user_df = pd.DataFrame([user_inputs], columns=relevant_features)
 user_anomaly_pred = model.predict(user_df)
-user_anomaly_pred_binary = i if user_anomaly_pred == -1 else 0
+user_anomaly_pred_binary = id if user_anomaly_pred == -1 else 0
 
 if user_anomaly_pred_binary == 1:
     print("Anomaly detected: This transaction is flagged as an anomaly")
